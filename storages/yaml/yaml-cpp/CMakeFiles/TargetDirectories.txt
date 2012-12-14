@@ -1,0 +1,5 @@
+G:/github/storages/yaml/yaml-cpp/CMakeFiles/ALL_BUILD.dir
+G:/github/storages/yaml/yaml-cpp/CMakeFiles/ZERO_CHECK.dir
+G:/github/storages/yaml/yaml-cpp/util/CMakeFiles/parse.dir
+G:/github/storages/yaml/yaml-cpp/test/CMakeFiles/run-tests.dir
+G:/github/storages/yaml/yaml-cpp/CMakeFiles/yaml-cpp.dir
