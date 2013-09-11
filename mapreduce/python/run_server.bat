@@ -1,1 +1,1 @@
-python octo.py server wordcount.py
+c:\\python26\\python.exe octo.py server wordcount.py
