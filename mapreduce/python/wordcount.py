@@ -16,13 +16,15 @@ def final(key,value):
 
 # client
 def mapfn(key,value):
-      i = 30000000
+      '''i = 30000000
       while i > 0:
         i -= 1
-      yield "hello",1
-      '''for line in value.splitlines():
+      yield "hello",1'''
+      
+      for line in value.splitlines():
+          # Loooong time
           for word in line.split():
-               yield word.lower(),1'''
+               yield word.lower(),1
 
 def reducefn(key,value):
        return key,len(value)
