@@ -436,7 +436,7 @@ class ChatTaskServer(TaskServer,asyncore.dispatcher):
         
 
 
-DEFAULT_CHAT_POLL = 60
+DEFAULT_CHAT_POLL = 1#60
 DEFAULT_CHAT_RETRY = 3
 DEFAULT_CHAT_CLIENT_BUFFER = 1024
 
