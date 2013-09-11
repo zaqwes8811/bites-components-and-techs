@@ -1,0 +1,1 @@
+python octo.py server wordcount.py
