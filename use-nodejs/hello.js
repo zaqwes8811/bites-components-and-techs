@@ -10,6 +10,8 @@
 // @AngularJS
 // http://docs.angularjs.org/tutorial
 
+// Для тестирования
+// http://visionmedia.github.io/mocha/ - можно тестить асинхронный код!
 
 console.log("Hello World");
 
