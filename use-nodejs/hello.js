@@ -56,5 +56,19 @@ var apple = {
 console.log(apple.getInfo());
 
 
+for(var i=0;i<50;i++) {
+      functionWrappingAsycfuncs(i)
+}
+
+var nums = [0,1...50]
+nums.forEach(functionWrappingAsyncfuns)
+
+functionWrappingAsycfuncs(i){
+  readFileAsync(i,function(){
+    console.log(i);
+  });
+}
+
+
 
 
