@@ -1,4 +1,5 @@
-// JQuery on Windows no work 
+// JQuery on Windows no work
+// Google Closure... есть nclosure, но с Windows похоже не работает. 
 
 console.log("Hello World");
 
@@ -56,6 +57,24 @@ var apple = {
 }
 
 console.log(apple.getInfo());
+
+// nclosure
+// You can now run the test just by executing this file
+require('nclosure').nclosure();
+
+goog.require('goog.testing.jsunit');
+// Import the code you are testing (may need an additionalDeps defined)
+goog.require('nclosure.examples.simple.Example');
+
+// Any testXXX function are auto-discovered and run
+var testFunction1 = function() {
+  assertNotEquals(typeof(example_), 'undefined');
+};
+
+// Also auto discovered
+function testFunction2() {
+  assertTrue(false);
+}
 
 
 
