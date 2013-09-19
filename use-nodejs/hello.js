@@ -10,8 +10,10 @@
 // @AngularJS
 // http://docs.angularjs.org/tutorial
 
-// Для тестирования
+// Для тестирования - хорошо бы запускать вне браузера
 // http://visionmedia.github.io/mocha/ - можно тестить асинхронный код!
+// http://visionmedia.github.io/expresso/
+// http://pivotal.github.io/jasmine/ - независит от DOM
 
 console.log("Hello World");
 
