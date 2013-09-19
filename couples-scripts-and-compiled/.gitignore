@@ -1,0 +1,25 @@
+java/workspace/.metadata/
+*.class
+*.obj
+*.exe
+*.idb
+*.pdb
+*.suo
+*.dep
+*.ncb
+*.user
+*.manifest
+*.manifest.res
+*.ilk
+BuildLog.htm
+*.pkc
+
+*.pch
+*.pyd
+
+build
+/java/netbeans-sln/New Folder/jsr_test/dist/
+dist
+cachedir
+out
+/java/pkgs/netbeans-sln/nbproject/private/
