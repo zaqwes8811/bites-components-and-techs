@@ -10,3 +10,4 @@
 *.res
 *.dep
 *.idb
+*.pyc
