@@ -3,7 +3,14 @@
 // http://msdn.microsoft.com/en-us/library/fw509c3b.aspx
 // http://iproc.ru/programming/openmp-visual-studio/
 #include <iostream>
+#ifdef _DEBUG
+#undef _DEBUG
 #include <omp.h>
+#define _DEBUG
+#else
+#include <omp.h>
+#endif
+
 
 using namespace std;
 
