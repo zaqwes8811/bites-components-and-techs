@@ -6,6 +6,7 @@
 // http://www.viva64.com/ru/a/0054/
 // http://habrahabr.ru/company/intel/blog/85273/
 // https://computing.llnl.gov/tutorials/openMP/
+// http://www.ibm.com/developerworks/aix/library/au-aix-openmp-framework/
 #include <iostream>
 #ifdef _DEBUG
 #undef _DEBUG
