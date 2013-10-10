@@ -2,6 +2,8 @@
 // http://openmp.org/forum/viewtopic.php?f=3&t=1004
 // http://msdn.microsoft.com/en-us/library/fw509c3b.aspx
 // http://iproc.ru/programming/openmp-visual-studio/
+//
+// http://www.viva64.com/ru/a/0054/
 #include <iostream>
 #ifdef _DEBUG
 #undef _DEBUG
@@ -18,12 +20,20 @@ int main(int argc, char **argv)
 {
     int test( 999 );
 
-    omp_set_num_threads( 2 );
-    #pragma omp parallel reduction(+:test)
+    #pragma omp parallel sections
     {
-        #pragma omp critical
-        cout << "test = " << test << endl;
+       #pragma omp section
+       {
+         cout << "test = 3 " << test << endl;
+       }
+
+       #pragma omp section
+       {
+         cout << "test = 4 " << test << endl;
+       }
     }
+
+    #pragma omp barrier
 
     return EXIT_SUCCESS;
 }
