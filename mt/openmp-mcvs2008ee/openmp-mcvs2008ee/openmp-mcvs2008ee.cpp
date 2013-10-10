@@ -4,6 +4,8 @@
 // http://iproc.ru/programming/openmp-visual-studio/
 //
 // http://www.viva64.com/ru/a/0054/
+// http://habrahabr.ru/company/intel/blog/85273/
+// https://computing.llnl.gov/tutorials/openMP/
 #include <iostream>
 #ifdef _DEBUG
 #undef _DEBUG
