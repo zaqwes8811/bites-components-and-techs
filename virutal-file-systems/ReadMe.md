@@ -3,3 +3,4 @@ http://stackoverflow.com/questions/2336804/open-source-embedded-filesystem-or-si
 https://code.google.com/p/v8-juice/
 https://code.google.com/p/v8-juice/wiki/V8Convert_Whio
 https://code.google.com/p/msinttypes/
+http://stackoverflow.com/questions/17206568/what-is-the-difference-between-c-c99-ansi-c-and-gnu-c-a-general-confusion-reg?lq=1
