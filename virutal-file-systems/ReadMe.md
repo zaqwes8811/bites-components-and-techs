@@ -1,0 +1,1 @@
+http://www.flipcode.com/archives/Programming_a_Virtual_File_System-Part_I.shtml
