@@ -1,5 +1,5 @@
 use-nodejs/node_modules/
-*.exe
+*.exe 
 *.ncb
 *.obj
 *.o
