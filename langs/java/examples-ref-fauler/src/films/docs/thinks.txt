@@ -1,0 +1,7 @@
+﻿Dict:
+  movie - кино
+  rental - аренда
+  customer - клиент
+    statement - заявление
+
+charge - платеж

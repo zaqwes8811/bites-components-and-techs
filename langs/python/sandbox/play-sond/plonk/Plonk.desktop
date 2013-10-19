@@ -1,0 +1,14 @@
+[Desktop Entry]
+Comment=
+Exec=/usr/local/bin/plonk %U
+GenericName=Easily play audio
+Icon=gnome-volume-control
+Name=Plonk
+NoDisplay=false
+StartupNotify=true
+Terminal=0
+TerminalOptions=
+Type=Application
+MimeType=audio/*
+X-KDE-SubstituteUID=false
+X-KDE-Username=

@@ -1,0 +1,7 @@
+*.pyc
+obj
+bin
+*.class
+out
+*.obj
+*.ncb

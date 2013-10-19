@@ -1,0 +1,5 @@
+WARNING: Phonon needs QCoreApplication::applicationName to be set to export audio output names through the DBUS interface 
+ASSERT: "QCoreApplication::instance()" in file ../../phonon/factory.cpp, line 378
+Aborted
+
+#

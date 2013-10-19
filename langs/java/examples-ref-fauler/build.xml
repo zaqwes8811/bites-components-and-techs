@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<project default="run">
+	<description>A simple Java project</description>  
+		<property environment="env"/>
+		<property name="srcDir" location="src"/>
+		<property name="buildDir" location="build"/>
+		<property name="distDir" location="dist"/>
+		<property name="testDir" location="test"/>
+		<property name="libDir" location="${env.JUNIT_HOME}"/>
+
+	<target name="init">
+		<tstamp/>
+		<mkdir dir="${buildDir}"/>
+		<mkdir dir="${distDir}"/>
+	</target>
+
+	<target name="compile" depends="init">
+		<javac includeantruntime="false" srcdir="${srcDir}" destdir="${buildDir}">
+			<classpath>
+				<path id="junit" location="${libDir}/junit-4.10.jar"/>
+			</classpath>
+			<compilerarg value="-Xlint:unchecked"/>
+		</javac>
+	</target>
+
+	<target name="dist" depends="compile, test">
+		<jar destfile="${distDir}/films.jar" basedir="${buildDir}">
+			<manifest>
+				<attribute name="Built-By" value="${user.name}"/>
+				<attribute name="Main-Class" value="films.CustomerTest"/>
+				<attribute name="Class-Path" value="junit-4.10.jar"/>
+			</manifest>
+		</jar>
+		<copy file="${libDir}/junit-4.10.jar" todir="dist"/>
+	</target>
+
+	<target name="clean">
+		<delete dir="${buildDir}"/>
+		<delete dir="${distDir}"/>
+	</target>
+
+	<target name="run" depends="dist">
+		<java jar="${distDir}/films.jar" fork="true"></java>
+	</target>
+
+	<!-- тестирование -->
+	<target name="compile_tests">
+		<javac includeantruntime="false" srcdir="${testDir}" destdir="${buildDir}">
+			<classpath>
+				<path id="junit" location="${libDir}/junit-4.10.jar"/>
+				<path id="src" location="${buildDir}"/>
+			</classpath>
+			<compilerarg value="-Xlint:unchecked"/>
+		</javac>
+	</target>
+	<target name="test" depends="compile_tests">
+		<!--java jar="${distDir}/package.jar" fork="true"></java-->
+	</target>
+</project>
