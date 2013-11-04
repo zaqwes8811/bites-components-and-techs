@@ -25,3 +25,6 @@ function BaseController() {
 
 	//}
 }
+
+
+new BaseController();
