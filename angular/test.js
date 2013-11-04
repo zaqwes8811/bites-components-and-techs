@@ -9,3 +9,9 @@ describe("B suite", function() {
     return expect(true).toBe(true);
   });
 });
+
+describe("C suite", function() {
+	return it("spec with an expectation", function() {
+		return expect(true).toBe(true); 
+	});
+});
