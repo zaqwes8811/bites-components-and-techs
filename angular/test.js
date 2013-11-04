@@ -16,15 +16,3 @@ describe("C suite", function() {
 	});
 });
 
-
-function BaseController() {
-	this.tmp = '';
-	//this.prtt = function()
-
-	//this.priv = function() {
-
-	//}
-}
-
-
-new BaseController();
