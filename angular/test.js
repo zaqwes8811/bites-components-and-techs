@@ -15,3 +15,11 @@ describe("C suite", function() {
 		return expect(true).toBe(true); 
 	});
 });
+
+
+/*
+function BaseController() {
+	this.tmp = '';
+}
+tmp = new BaseController();
+tmp.*/
