@@ -12,3 +12,4 @@ use-nodejs/node_modules/
 *.dep
 *.idb
 *.pyc
+*.class
