@@ -13,3 +13,4 @@ use-nodejs/node_modules/
 *.idb
 *.pyc
 *.class
+*.jar
