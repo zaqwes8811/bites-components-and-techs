@@ -50,12 +50,12 @@ OneCard.prototype.exchange = function () {
   console.log(this);
 }
 
-var card = new OneCard("hello");
+
 
 suite('asyncPrime', function() {
   test('asyncPrime should return the next prime number', function(done) {
     var request = require('request');
-    
+    var card = new OneCard("hello");
     var responseProcessor = _.bind(card.exchange, card)
     //responseProcessor = card.exchange;  // bad!
     request('http://192.168.1.230', 
