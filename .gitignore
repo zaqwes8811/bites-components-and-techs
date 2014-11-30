@@ -11,3 +11,5 @@
 *.dep
 *.idb
 *.pyc
+*.class
+*.jar
