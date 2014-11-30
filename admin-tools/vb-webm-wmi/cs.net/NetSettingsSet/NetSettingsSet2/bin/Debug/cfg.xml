@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<SaveData>
+  <SetConnection>
+    <RS_232>
+      <PortName>COM1</PortName>
+      <Speed>9600</Speed>
+    </RS_232>
+    <Ethernet>
+      <sIP>172.23.132.223</sIP>
+      <sPort>5000</sPort>
+      <dIP>127.0.0.1</dIP>
+      <dPort>5001</dPort>
+      <SubMask>255.255.224.0</SubMask>
+      <Gateway>172.23.128.254</Gateway>
+    </Ethernet>
+  </SetConnection>
+  <MainTransiver>
+    <OutFrequency>103.05</OutFrequency>
+    <OutPower>250</OutPower>
+    <AutoRun>выключить</AutoRun>
+    <RegimeMS>моно</RegimeMS>
+    <RegimePP>полярная модуляция</RegimePP>
+    <PreDistortion>выключить</PreDistortion>
+    <FrequencyDivisionMultiplexing>выключить</FrequencyDivisionMultiplexing>
+    <Output>аналоговый</Output>
+    <AmplificationAB_dB>+3.5</AmplificationAB_dB>
+  </MainTransiver>
+  <GlobalSets>
+    <ConnectionType>Ethernet</ConnectionType>
+    <Power>10-500 Вт</Power>
+    <Reserve>включено</Reserve>
+  </GlobalSets>
+</SaveData>

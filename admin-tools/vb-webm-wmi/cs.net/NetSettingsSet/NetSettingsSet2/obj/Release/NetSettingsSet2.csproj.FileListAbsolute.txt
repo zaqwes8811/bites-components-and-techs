@@ -1,0 +1,9 @@
+D:\Public\dbox-job\Dropbox\github\offo-script-toolkit\vb_webm_wmi\NetSettingsSet\NetSettingsSet2\bin\Release\NetSettingsSet2.exe.config
+D:\Public\dbox-job\Dropbox\github\offo-script-toolkit\vb_webm_wmi\NetSettingsSet\NetSettingsSet2\bin\Release\NetSettingsSet2.exe
+D:\Public\dbox-job\Dropbox\github\offo-script-toolkit\vb_webm_wmi\NetSettingsSet\NetSettingsSet2\bin\Release\NetSettingsSet2.pdb
+D:\Public\dbox-job\Dropbox\github\offo-script-toolkit\vb_webm_wmi\NetSettingsSet\NetSettingsSet2\obj\Release\ResolveAssemblyReference.cache
+D:\Public\dbox-job\Dropbox\github\offo-script-toolkit\vb_webm_wmi\NetSettingsSet\NetSettingsSet2\obj\Release\NetSettingsSet2.Form1.resources
+D:\Public\dbox-job\Dropbox\github\offo-script-toolkit\vb_webm_wmi\NetSettingsSet\NetSettingsSet2\obj\Release\NetSettingsSet2.Properties.Resources.resources
+D:\Public\dbox-job\Dropbox\github\offo-script-toolkit\vb_webm_wmi\NetSettingsSet\NetSettingsSet2\obj\Release\NetSettingsSet2.csproj.GenerateResource.Cache
+D:\Public\dbox-job\Dropbox\github\offo-script-toolkit\vb_webm_wmi\NetSettingsSet\NetSettingsSet2\obj\Release\NetSettingsSet2.exe
+D:\Public\dbox-job\Dropbox\github\offo-script-toolkit\vb_webm_wmi\NetSettingsSet\NetSettingsSet2\obj\Release\NetSettingsSet2.pdb
