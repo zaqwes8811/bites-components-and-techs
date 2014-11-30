@@ -1,1 +1,0 @@
-D:/github-develop/mc-assistant/test-qt-creator/CMakeFiles/test-qc.dir
