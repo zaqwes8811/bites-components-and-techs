@@ -1,0 +1,14 @@
+﻿		bsf		MFLAG,0
+		bsf		MFLAG,2
+
+		movff	D9BL,DAL
+		movff	D9BH,DAH
+		
+			swapf	DAH,f
+			swapf	DAL,f
+			movlw	b'11110000'
+			andwf	DAH,f
+			movlw	b'00001111'
+			andwf	DAL,w
+			iorwf	DAH,f
+		lfsr	0,DAL

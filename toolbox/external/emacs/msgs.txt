@@ -1,0 +1,33 @@
+
+Quit
+byte-: Beginning of buffer [5 times]
+byte-code: End of buffer
+byte-code: Beginning of buffer
+Mark setRET to restore the oRET to restore the o
+Replaced 0 occurrences
+Mark set [10 times]
+Undo! [3 times]
+Loading vc-git...done
+Wrote g:/github/jarvis/emacs/test.c
+This buffer (*cmd shell* / shell-mode) cannot use `imenu-default-create-index-function'
+mapcar: Wrong type argument: listp, 84
+C-c C-n is undeu
+Type C-x 4 C-o RET to restore the other window, C-M-v to scroll help.
+byte-code: Beginning of buffer
+byte-code: End of buffer [5 times]
+Auto-saving...done
+Line 5
+Region has 0 lines, 0 characters
+Region has 2 lines, 6 characters
+scroll-bar-toolkit-scroll: End of buffer [3 times]
+scroll-bar-toolkdit-scroll: Beginning of buffer [4 times]
+scroll-bar-toolkit-scroll: Beginning of buffer
+
+
+
+
+
+
+
+
+

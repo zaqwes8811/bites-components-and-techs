@@ -1,0 +1,183 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Sun Dec 23 19:30:16 2012
+;; Desktop file format version 206
+;; Emacs version 23.1.50.1
+
+;; Global section:
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '("scroll" "df" "scroll" "byte-code" "Type" "byte-code" "Type" "byte-code" "Type" "T" "Type"))
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("g:/github/jarvis/emacs" "g:/github/jarvis/" "g:/github/jarvis/emacs/" "g:/github/jarvis/emacs/." "g:/github/jarvis/np.py" "g:/github/jarvis/emacs" "g:/" "d:/" "g:/github/jarvis/.gitignore" "" "g:/github/jarvis/*.py" "g:/github/jarvis/emacs/*.txt" "g:/github/jarvis/emacs/*.bat" "g:/github/jarvis/emacs/test.c" "g:/github/jarvis/emacs/msgs.txt"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  nil
+  "*info*"
+  'Info-mode
+  nil
+  18576
+  '(nil nil)
+  t
+  '("c:/Program Files/Emacs-p/emacs/info/emacs" "Top")
+  '((tab-width . 8) (buffer-file-coding-system . undecided-dos) (case-fold-search . t)))
+
+(desktop-create-buffer 206
+  "g:/github/jarvis/to-npp.py"
+  "to-npp.py"
+  'python-mode
+  nil
+  581
+  '(167 nil)
+  nil
+  nil
+  '((tab-width . 8) (indent-tabs-mode) (buffer-file-coding-system . utf-8-with-signature-unix)))
+
+(desktop-create-buffer 206
+  nil
+  "jarvis"
+  'dired-mode
+  nil
+  1237
+  '(nil nil)
+  t
+  '("g:/github/jarvis/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "*Find*"
+  'dired-mode
+  nil
+  75
+  '(nil nil)
+  t
+  '("g:/github/jarvis/")
+  nil)
+
+(desktop-create-buffer 206
+  nil
+  "emacs"
+  'dired-mode
+  nil
+  183
+  '(nil nil)
+  t
+  '("g:/github/jarvis/emacs/")
+  nil)
+
+(desktop-create-buffer 206
+  "g:/github/jarvis/emacs/troubles.txt"
+  "troubles.txt"
+  'text-mode
+  nil
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-with-signature-dos)))
+
+(desktop-create-buffer 206
+  "g:/github/jarvis/emacs/bat.bat"
+  "bat.bat"
+  'fundamental-mode
+  nil
+  205
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-with-signature-unix)))
+
+(desktop-create-buffer 206
+  "d:/_emacs"
+  "_emacs"
+  'emacs-lisp-mode
+  nil
+  8968
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "g:/github/jarvis/Jarvis.py"
+  "Jarvis.py"
+  'python-mode
+  nil
+  23
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 8) (buffer-file-coding-system . utf-8-unix)))
+
+(desktop-create-buffer 206
+  "g:/github/jarvis/.gitignore"
+  ".gitignore"
+  'fundamental-mode
+  nil
+  12
+  '(1 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . undecided-unix)))
+
+(desktop-create-buffer 206
+  "g:/github/jarvis/text-find.py"
+  "text-find.py"
+  'python-mode
+  nil
+  142
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 8) (buffer-file-coding-system . utf-8-with-signature-unix)))
+
+(desktop-create-buffer 206
+  "g:/github/jarvis/emacs/test.c"
+  "test.c"
+  'c-mode
+  '(abbrev-mode)
+  201
+  '(nil nil)
+  nil
+  nil
+  '((tab-width . 4) (buffer-file-coding-system . undecided-dos)))
+
+(desktop-create-buffer 206
+  "g:/github/jarvis/emacs/todo.txt"
+  "todo.txt"
+  'text-mode
+  nil
+  241
+  '(100 nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-with-signature-dos)))
+
+(desktop-create-buffer 206
+  "g:/github/jarvis/emacs/troubles.txt.gz"
+  "troubles.txt.gz"
+  'text-mode
+  nil
+  1
+  '(nil nil)
+  nil
+  nil
+  '((buffer-file-coding-system . utf-8-with-signature-dos)))
+
+(desktop-create-buffer 206
+  "g:/github/jarvis/emacs/msgs.txt"
+  "msgs.txt"
+  'text-mode
+  '(view-mode)
+  409
+  '(108 nil)
+  t
+  nil
+  '((buffer-file-coding-system . undecided-dos)))
+

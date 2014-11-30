@@ -1,0 +1,2 @@
+﻿#Win:
+git push no work. Виснет редактор
