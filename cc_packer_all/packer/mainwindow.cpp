@@ -1,10 +1,16 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include <string>
+
 #include <openssl/bn.h>
 #include <openssl/sha.h>
 #include <openssl/rsa.h>
 #include <openssl/objects.h>
+
+#include <tarlib/tarlib.h>
+
+//#include <
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -13,14 +19,25 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 }
 
-void MainWindow::OnClick() {
+void extract1(std::string const &filename, std::string const &destination)
+{
+   // create tar file with path and read mode
+  //tarlib::tarFile tarf(filename, tarlib::tarModeRead);
 
+   // extract to folder
+   //tarf.extract(destination);
+    std::string s;
+}
+
+void MainWindow::OnClick() {
+    extract1("test.tar", "tmp");
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
+
 
 
 int spc_verify(unsigned char *msg, unsigned int mlen, unsigned char *sig,

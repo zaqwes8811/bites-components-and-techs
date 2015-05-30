@@ -13,14 +13,16 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp #\
+    #C:\job\tarlib.src\tarlib\*.cpp
 
 HEADERS  += mainwindow.h
 
 FORMS    += mainwindow.ui
 
 # Win
-INCLUDEPATH += "C:\job\openssl-1.0.2a\dist\include"
+INCLUDEPATH += "C:\job\openssl-1.0.2a\dist\include" "C:\job\tarlib.src"
 LIBS += -L"C:\job\openssl-1.0.2a\dist\lib" -lcrypto -lssl -lgdi32
+#-lshell32 -lshlwapi
 
-# Tar
+# Tar - stopped - user mingw tar
