@@ -1,8 +1,15 @@
+# http://www.seas.gwu.edu/~drum/java/lectures/appendix/installer/install.html
 # define installer name
 OutFile "installer.exe"
  
 # set desktop as install directory
-InstallDir $DESKTOP
+InstallDir $DESKTOP\App
+
+; The default installation directory
+#InstallDir $PROGRAMFILES\Example1
+
+; The text to prompt the user to enter a directory
+DirText "This will install My Cool Program on your computer. Choose a directory"
 
 # Deps
 Var QtBinPath ;Declare the variable
@@ -11,25 +18,28 @@ Var ExeFileDir ;
 
 # default section start
 Section
-	CreateDirectory $INSTDIR\App
+	CreateDirectory $INSTDIR
+	#\App
 	 
 	# define output path
-	SetOutPath $INSTDIR\App
+	SetOutPath $INSTDIR
 	 
 	# specify file to go in output path
-	File "build-packer-Desktop_Qt_5_4_1_MinGW_32bit-Debug\\debug\\packer.exe"
-	File "C:\\Qt\\5.4\\mingw491_32\\bin\\Qt5Cored.dll"
+	File "c:\\packer_release.exe"
+	File "C:\\Qt\\5.4\\mingw491_32\\bin\\Qt5Core.dll"
+	File "C:\\Qt\\5.4\\mingw491_32\\bin\\Qt5Widgets.dll"
+	File "C:\\Qt\\5.4\\mingw491_32\\bin\\Qt5Gui.dll"
 	File "C:\\Qt\\5.4\\mingw491_32\\bin\\libgcc_s_dw2-1.dll"
 	File "C:\\Qt\\5.4\\mingw491_32\\bin\\libwinpthread-1.dll"
 	File "C:\\Qt\\5.4\\mingw491_32\\bin\\libstdc++-6.dll"
 	File "C:\\Qt\\5.4\\mingw491_32\\bin\\icudt53.dll"
 	File "C:\\Qt\\5.4\\mingw491_32\\bin\\icuin53.dll"
 	File "C:\\Qt\\5.4\\mingw491_32\\bin\\icuuc53.dll"
-	File "C:\\Qt\\5.4\\mingw491_32\\bin\\Qt5Widgetsd.dll"
-	File "C:\\Qt\\5.4\\mingw491_32\\bin\\Qt5Guid.dll"
-	 
+	
+	File "/oname=tar.exe" "tar.exe__" 
+		 
 	# define uninstaller name
-	WriteUninstaller $INSTDIR\App\uninstaller.exe
+	WriteUninstaller $INSTDIR\uninstaller.exe
 SectionEnd
  
 # create a section to define what the uninstaller does.
@@ -40,10 +50,11 @@ Section "Uninstall"
 	Delete $INSTDIR\uninstaller.exe
 	 
 	# now delete installed file
-	Delete $INSTDIR\packer.exe
+	Delete $INSTDIR\packer_release.exe
+	Delete $INSTDIR\tar.exe
 	Delete $INSTDIR\*.dll
 
 	# App folder
-	RMDir $INSTDIR\..\App
+	RMDir $INSTDIR
  
 SectionEnd
