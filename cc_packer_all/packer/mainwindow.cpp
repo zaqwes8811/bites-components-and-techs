@@ -9,6 +9,7 @@
 #include <openssl/objects.h>
 
 #include <QtConcurrent/QtConcurrent>
+#include <QDebug>
 
 //#include <tarlib/tarlib.h>
 
@@ -19,6 +20,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    connect(&m_observer, SIGNAL(finished()), this, SLOT(onFinish()));
 }
 
 void extract1(std::string const &filename, std::string const &destination)
@@ -29,6 +32,10 @@ void extract1(std::string const &filename, std::string const &destination)
    // extract to folder
    //tarf.extract(destination);
     std::string s;
+}
+
+void call() {
+
 }
 
 // http://ynonperek.com/course/qt/threads.html
@@ -46,12 +53,17 @@ void MainWindow::OnClick() {
 
     std::vector<int> in;
 
-    //QtConcurrent::map()
+    QFuture<void> future = QtConcurrent::run(call);
+    m_observer.setFuture(future);
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::onFinish() {
+  qDebug() << "Done";
 }
 
 

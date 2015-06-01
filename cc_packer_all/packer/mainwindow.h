@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QtConcurrent>
 
 namespace Ui {
 class MainWindow;
@@ -18,8 +19,12 @@ public:
 private slots:
     void OnClick();
 
+    void onFinish();
+
 private:
     Ui::MainWindow *ui;
+
+    QFutureWatcher<void> m_observer;
 };
 
 #endif // MAINWINDOW_H
