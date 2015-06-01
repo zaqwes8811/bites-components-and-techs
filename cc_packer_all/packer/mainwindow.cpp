@@ -8,6 +8,8 @@
 #include <openssl/rsa.h>
 #include <openssl/objects.h>
 
+#include <QtConcurrent/QtConcurrent>
+
 //#include <tarlib/tarlib.h>
 
 //#include <
@@ -29,8 +31,22 @@ void extract1(std::string const &filename, std::string const &destination)
     std::string s;
 }
 
+// http://ynonperek.com/course/qt/threads.html
+// http://doc.qt.io/qt-5/threads-reentrancy.html
+// http://doc.qt.io/qt-4.8/qtconcurrentmap.html#concurrent-map-reduce
+//
+// 0. Make message
+// 1. eventExec() - не блокируем полностью
+// 2. parallel all
+//
+// Split work -
+// http://stackoverflow.com/questions/18962056/how-to-split-a-qlist-at-position-n-to-a-new-qlist
 void MainWindow::OnClick() {
     extract1("test.tar", "tmp");
+
+    std::vector<int> in;
+
+    //QtConcurrent::map()
 }
 
 MainWindow::~MainWindow()
