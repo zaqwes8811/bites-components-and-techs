@@ -1,5 +1,8 @@
 # http://www.seas.gwu.edu/~drum/java/lectures/appendix/installer/install.html
 # define installer name
+
+!include "MUI2.nsh"
+
 OutFile "installer.exe"
  
 # set desktop as install directory
@@ -8,13 +11,23 @@ InstallDir $DESKTOP\App
 ; The default installation directory
 #InstallDir $PROGRAMFILES\Example1
 
-; The text to prompt the user to enter a directory
-DirText "This will install My Cool Program on your computer. Choose a directory"
-
 # Deps
 Var QtBinPath ;Declare the variable
 Var OpenSSLBinPath ;
 Var ExeFileDir ;
+
+!define MUI_LANGDLL_ALLLANGUAGES
+!insertmacro MUI_LANGUAGE "Russian"
+!insertmacro MUI_LANGUAGE "English"
+!insertmacro MUI_RESERVEFILE_LANGDLL
+
+Function .onInit
+!insertmacro MUI_LANGDLL_DISPLAY ;This has to come after the language macros
+FunctionEnd
+
+; The text to prompt the user to enter a directory
+DirText "This will install My Cool Program on your computer. Choose a directory"
+
 
 # default section start
 Section
