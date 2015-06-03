@@ -21,7 +21,12 @@ HEADERS  += mainwindow.h
 
 FORMS    += mainwindow.ui
 
-#win32 {
+linux {
+LIBS += -lcrypto -lssl
+}
+
+
+win32 {
 # Win
 INCLUDEPATH += "C:\job\openssl-1.0.2a\dist\include"
 #"C:\job\tarlib.src"
@@ -32,4 +37,4 @@ release {
     # Tar - stopped - user mingw tar
     QMAKE_POST_LINK += $$PWD\\action.bat $$OUT_PWD/release/packer.exe c:\\packer_release.exe
 }
-#}
+}
