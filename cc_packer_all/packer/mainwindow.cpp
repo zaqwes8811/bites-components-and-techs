@@ -15,13 +15,34 @@
 
 //#include <
 
+static QTableWidget* report ;
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
 
+    report = findChild<QTableWidget*>("tableWidget");
+    if (report) {
+        report->setRowCount(2);
+        QTableWidgetItem* w = new QTableWidgetItem(QString("adfasdf"));
+        //w->setFlags(w->flags() ^ Qt:);
+        report->setItem(1, 0, w);
+    }
+
     connect(&m_observer, SIGNAL(finished()), this, SLOT(onFinish()));
+
+    popMenu = new QMenu(report);
+    action = new QAction("Copy", this);
+
+    // myWidget is any QWidget-derived class
+    report->setContextMenuPolicy(Qt::CustomContextMenu);
+    connect(
+          report, SIGNAL(customContextMenuRequested(const QPoint&)),
+          this, SLOT(ShowContextMenu(const QPoint&)));
+
+    connect(action, SIGNAL(triggered()), this, SLOT(rightClickedOperation()));
 }
 
 void extract1(std::string const &filename, std::string const &destination)
@@ -32,6 +53,52 @@ void extract1(std::string const &filename, std::string const &destination)
    // extract to folder
    //tarf.extract(destination);
     std::string s;
+}
+
+void MainWindow::rightClickedOperation()
+{
+  qDebug() << "act";
+}
+
+void MainWindow::ShowContextMenu(const QPoint& pos) // this is a slot
+{
+  popMenu->addAction(action);
+
+  QTableWidgetItem *item;
+  item = ui->tableWidget->itemAt(pos);
+
+  if(!item)
+      return;
+
+  qDebug() << "item text" << item->text();
+
+  popMenu->exec(QCursor::pos());
+
+  /*// for most widgets
+    QPoint globalPos = report->mapToGlobal(pos);
+    // for QAbstractScrollArea and derived classes you would use:
+    // QPoint globalPos = myWidget->viewport()->mapToGlobal(pos);
+    QModelIndex item = report->indexAt(globalPos);
+    qDebug() << item.column() << item.row();
+
+    QTableWidgetItem* w = report->item(item.row(), item.column());
+
+    QMenu menu(report);
+    menu.addAction("Copy");
+
+    QAction* selectedItem = menu.exec(QCursor::pos());
+    if (selectedItem)
+    {
+        // something was chosen, do stuff
+        //selectedItem->
+        qDebug() << "do";
+    }
+    else
+    {
+        // nothing was chosen
+        qDebug() << "do noting";
+    }
+    */
 }
 
 void call() {
@@ -55,6 +122,8 @@ void MainWindow::OnClick() {
 
     QFuture<void> future = QtConcurrent::run(call);
     m_observer.setFuture(future);
+
+
 }
 
 MainWindow::~MainWindow()

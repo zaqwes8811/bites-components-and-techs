@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>419</width>
+    <height>415</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -27,14 +27,34 @@
      <string>PushButton</string>
     </property>
    </widget>
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>100</y>
+      <width>256</width>
+      <height>192</height>
+     </rect>
+    </property>
+    <row>
+     <property name="text">
+      <string>New Row</string>
+     </property>
+    </row>
+    <column>
+     <property name="text">
+      <string>hello</string>
+     </property>
+    </column>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>400</width>
-     <height>20</height>
+     <width>419</width>
+     <height>25</height>
     </rect>
    </property>
   </widget>

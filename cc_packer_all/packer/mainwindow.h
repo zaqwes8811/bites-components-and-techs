@@ -21,10 +21,19 @@ private slots:
 
     void onFinish();
 
+    void ShowContextMenu(const QPoint& pos);
+
+    void rightClickedOperation();
+
 private:
     Ui::MainWindow *ui;
 
     QFutureWatcher<void> m_observer;
+
+    QMenu *popMenu;
+    QAction *action;
+
+
 };
 
 #endif // MAINWINDOW_H
