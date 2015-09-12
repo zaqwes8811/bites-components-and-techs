@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<project default="pack">
+	<!--
+		1. настройки apache
+		2. сайт(серверная и клиентская части)
+		3. пока больше ничего...
+	.${TSTAMP} - точное врямя - пока что неудобно пильзоваться
+	-->
+	<description>Pack site</description>  
+		<property environment="env"/>
+		<!--property name="distDir" location="dists"/-->
+		<property name="distDir" location="D:\Public\tvct-dists"/>
+	<target name="pack">
+		<tstamp/>
+		<copy todir="D:\Sites\home\tvct-page-release\www">
+			<fileset dir="www">
+				<exclude name="trash/**"/>
+				<exclude name="stopped-branch/**"/>
+				<exclude name="libs/qunit*"/>
+				<exclude name="libs/*.txt"/>
+				<exclude name="js/*.txt"/>
+				<exclude name="js/statistic.js"/>
+			</fileset>
+		</copy>
+		<copy todir="D:\Sites\home\tvct-page-release\cgi-bin">
+			<fileset dir="cgi-bin">
+				<exclude name="test/**"/>
+			</fileset>
+		</copy>
+		<copy todir="D:\Sites\home\tvct-page-release\logs">
+			<fileset dir="logs"/>
+		</copy>
+
+		<zip destfile="${distDir}\httpserver.ru-${DSTAMP}.zip">
+			<zipfileset dir="www" prefix="www">
+				<exclude name="trash/**"/>
+				<exclude name="stopped-branch/**"/>
+				<exclude name="libs/qunit*"/>
+				<exclude name="libs/*.txt"/>
+				<exclude name="js/*.txt"/>
+				<exclude name="js/statistic.js"/>
+			</zipfileset>
+			<zipfileset dir="cgi-bin" prefix="cgi-bin">
+				<exclude name="test/**"/>
+			</zipfileset>
+			<zipfileset dir="logs" prefix="logs"/>
+			<zipfileset dir="apache-cfgs" prefix="apache-cfgs"/>
+		</zip>
+	</target>
+</project>
